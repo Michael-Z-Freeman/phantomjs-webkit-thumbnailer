@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=caja-phantomjs-webkit-thumbnailer
+Exec=caja-phantomjs-webkit-thumbnailer %i %o %s
+MimeType=text/html;

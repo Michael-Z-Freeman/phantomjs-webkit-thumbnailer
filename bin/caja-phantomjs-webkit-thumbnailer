@@ -1,0 +1,14 @@
+#!/bin/bash
+# Called by Caja using definition in "~/.local/share/thumbnailers/caja-phantomjs-webkit.thumbnailer".
+# Using "%i" = Input/file path/URI.  "%o" = PNG filename with path but without PNG extension.  "%s" = Thumbnail image size.
+# Assumes executables in "~/bin" are in system wide $PATH, or install to "/usr/local/bin".
+# Write requests from Caja to somewhere where we can see them.
+# echo "$1 $2 $3" >> /tmp/phantom-test.txt
+# Call the actual WWW thumbnailer and write messages and errors to somewhere where we can see them.
+phantomjs ~/bin/phantomjs-1.9.2-linux-i686/bin/make-www-screenshot.js "$1" $2 $3 2>&1 
+# | tee -a /tmp/phantom-test.txt &
+wait
+# PhantomJS javascript cannot write direct to a PNG file with a PNG extension as Caja requires. Could use
+# javascript to rename file but its fiddly so do it here !
+mv $2.png $2
+exit
