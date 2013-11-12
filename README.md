@@ -14,9 +14,7 @@ To do:
 
 * Error checking.
 
-* Speed increases. Needs time out setting (see end of javacript file).
-
-* Could do with time out setting being determined by page size. Some very large pages fail to render.
+* Speed increases. Needs flexible time out setting (see end of javascript file).
 
 This thumbnailer makes thumbs of files marked with text/html file type for the MATE Caja file browser - http://mate-desktop.org/ - It follows the freedesktop thumbnailer system that other Window Managers also should follow but compatability is not guarunteed. This is because there is no actual formal standard for thumbnailers - see http://www.freedesktop.org/wiki/#standards - Although the system has become widely accepted. There is "gnome-web-photo" available which is somewhat easier to use being a single executable, but at the present time it is not available for Debian. Anyway, PhantomJS is, I think, more configurable.
 
