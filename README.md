@@ -2,6 +2,11 @@ MATE Caja PhantomJS Webkit Thumbnailer, Barney Holmes/DJ Barney 2013
 
 Based on original script example by Stefan Judis - http://4waisenkinder.de/blog/2013/08/09/how-to-make-screenshots-with-phantomjs/
 
+known issues:
+
+* Some file types are marked with the mime type "text/html" but are not strictly web pages. For example the "maff" web page archive. These file types will fail to render at the moment and show a blank white image.
+
+* Some pages fail to render and return a blank image. This could be because these pages are larger and more complex and the script time out kicks in before they are returned. Currently being investigated.
 
 To do:
 
